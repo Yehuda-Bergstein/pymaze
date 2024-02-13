@@ -19,6 +19,8 @@ class Cell(object):
         self.is_entry_exit = None
         self.walls = {"top": True, "right": True, "bottom": True, "left": True}
         self.neighbours = list()
+    def __repr__(self):
+        return f"Cell(row={self.row}, col={self.col}, visited={self.visited}, active={self.active}, is_entry_exit={self.is_entry_exit}, walls={self.walls}, neighbours={len(self.neighbours)})"
 
     def is_walls_between(self, neighbour):
         """Function that checks if there are walls between self and a neighbour cell.
