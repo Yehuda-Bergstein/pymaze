@@ -40,8 +40,8 @@ if __name__ == "__main__":
 
 
     # show the maze
-    number1 = random.randint(0, 9)
-    number2 = random.randint(0, 7)
+    number1 = random.randint(0, 8)
+    number2 = random.randint(0, 6)
     maze_using_aldous_broder = Maze(9, 7, algorithm="aldous_broder", start_coor=(number1, number2))
     find_cell_with_walls(maze_using_aldous_broder, walls)
     
