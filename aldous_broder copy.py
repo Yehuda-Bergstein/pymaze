@@ -2,6 +2,7 @@ from __future__ import absolute_import
 from src.maze_manager import MazeManager
 from src.maze import Maze
 import logging
+import random
 import matplotlib
 
 # Set the logging level of matplotlib to WARNING to hide DEBUG and INFO messages
@@ -39,7 +40,9 @@ if __name__ == "__main__":
 
 
     # show the maze
-    maze_using_aldous_broder = Maze(9, 7, algorithm="aldous_broder", start_coor=(0, 0))
+    number1 = random.randint(0, 9)
+    number2 = random.randint(0, 7)
+    maze_using_aldous_broder = Maze(9, 7, algorithm="aldous_broder", start_coor=(number1, number2))
     find_cell_with_walls(maze_using_aldous_broder, walls)
     
     # show how the maze was generated
